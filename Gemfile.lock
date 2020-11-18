@@ -73,6 +73,8 @@ GEM
     graphql (1.11.6)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    jbuilder (2.10.1)
+      activesupport (>= 5.0.0)
     listen (3.3.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -161,6 +163,7 @@ DEPENDENCIES
   byebug
   graphiql-rails
   graphql
+  jbuilder (~> 2.7)
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
   pry-rails
