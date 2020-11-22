@@ -1,10 +1,13 @@
 module Types
   class MutationType < Types::BaseObject
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World"
+    field :add_comment, mutation: Mutations::AddComment do
+      description 'コメントを1件作成する'
+    end
+    field :add_user, mutation: Mutations::AddUser do
+      description 'ユーザーを1件作成する'
+    end
+    field :add_content, mutation: Mutations::AddContent do
+      description '記事を1件作成する'
     end
   end
 end

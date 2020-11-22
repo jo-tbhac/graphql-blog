@@ -1,13 +1,15 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :fetch_users, resolver: Queries::FetchUsers do
+      description 'ユーザー情報を全件取得する'
+    end
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :fetch_user, resolver: Queries::FetchUser do
+      description 'ユーザー情報を1件取得する'
+    end
+
+    field :fetch_contents, resolver: Queries::FetchContents do
+      description '全ての記事を取得する'
     end
   end
 end
